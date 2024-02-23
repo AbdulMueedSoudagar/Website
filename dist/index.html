@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test</title>
+  <style>
+   body {
+  background-image: url("grad.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#movingText {
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  margin-top: 50px;
+  background: linear-gradient(45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
+  background-size: 400% 400%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: gradientAnimation 8s ease infinite;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.button {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  padding: 15px 30px;
+  margin: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.button:before,
+.button:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--color);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.button:before {
+  transform: translateX(-100%);
+}
+
+.button:after {
+  transform: translateX(100%);
+}
+
+.button:hover:before,
+.button:hover:after {
+  transform: translateX(0);
+}
+  </style>
+</head>
+<body>
+  <center>
+    <h1><span id="movingText">Which Test?</span></h1>
+  </center>
+  <div class="container">
+    <a class="button" href="../mltest/testuser.html" style="--color:#1e9bff;">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Multiple Intelligences Test
+    </a>
+    <a class="button" href="../ldtest/testuserld.html" style="--color: #ff1867;">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Learning Disabilities Test
+    
+    </a>
+  </div>
+</body>
+</html>

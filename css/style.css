@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap');
+@import './variables.css';
+@import './utilities.css';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    color: white;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), linear-gradient(to bottom, #256EFF, #00B4FF);
+}
+
+header{
+    background: linear-gradient(135deg, rgba(0,0,0,1),rgba(0,0,0,00.2)),
+    url('../img/back.jpg');
+    min-height: 100vh;
+    background-size: cover;
+}
+
+header nav{
+    padding: 20px 40px 20px 100px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+
+}
+
+header nav .nav-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav .nav-right a{
+    text-decoration: none;
+    color: var(--pure);
+    margin-right: 30px;
+    position: relative;
+    font-size: 20px;
+}
+
+header nav .nav-right a:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    width: 0;
+    height: 2px;
+    background: var(--pure);
+    transition: width .3s ease-in-out;
+}
+
+header nav .nav-right a:hover:after {
+    width: 100%;
+}
+
+
+.heading{
+    text-align: justify;
+    margin-top: 300px;
+    margin-left: 180px;
+    font-size: 40px;
+    font-style: italic;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    margin: 1rem;
+    padding: 10px;
+}
+.wrapper img{
+    height: 300px;
+    right: -400px;
+    position: relative;
+}
+.wrapper h2{
+    background: linear-gradient(to right, #256EFF, #00B4FF);
+    right: -60px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.wrapper p{
+    color: white;
+    text-align: justify;
+    position: relative;
+    right: -60px;
+}
+
+.wrapper2{
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    margin: 1rem;
+    padding: 10px;
+}
+.wrapper2 img{
+    height: 300px;
+    right: -400px;
+    position: relative;
+}
+.wrapper2 h2{
+    background: linear-gradient(to right, #256EFF, #00B4FF);
+    right: -60px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.wrapper2 p{
+    color: white;
+    text-align: justify;
+    position: relative;
+    right: -60px;
+}
+
+/*----statement-----*/
+.wrapper-x{
+    display: flex;
+    justify-content: space-between;
+    width:60%;
+    margin: 1rem;
+    padding: 10px;
+}
+.wrapper-x h2{
+    background: linear-gradient(to right, #256EFF, #00B4FF);
+    right: -60px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.wrapper-x p{
+    color: white;
+    text-align: justify;
+    position: relative;
+    right: -60px;
+}
+/*------motivation-------*/
+
+.wrapper-y{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 1rem;
+    padding: 10px;
+}
+.wrapper-y h2{
+    background: linear-gradient(to right, #256EFF, #00B4FF);
+    right: -60px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.wrapper-y p{
+    color: white;
+    text-align: justify;
+    position: relative;
+    right: -60px;
+}
+
+
+footer {
+    clear: both;
+    text-align: center;
+    background-color: #437D7F;
+    color: #FFFFFF;
+    padding: 10px;
+  }
+  
+  footer p {
+    margin: 0; /* Remove default margin */
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Apply the animation to elements */
+  .animate-on-scroll {
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+  }

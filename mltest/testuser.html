@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multiple Intelligence Quiz</title>
+  <style>
+    body {
+      background-image: url("Dracula.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+
+    body{
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 20px;
+        line-height: 1.5em;
+        background-color: #437D7F;
+        color: white;
+        width: 80%;
+        margin: 20px auto;
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), linear-gradient(to bottom, #256EFF, #00B4FF);
+        background-size: cover;
+    }
+
+    h1 {
+      color: #ffffff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    img {
+      height: 400px;
+      width: 500px;
+    }
+
+    input[type="text"] {
+      width: 20%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #11ed48;
+      border-radius: 3px;
+    }
+
+    button[type="submit"] {
+      background-color: #6e5494;
+      color: #ffffff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #876fb6;
+    }
+
+    .additional-info {
+      max-width: 80%;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: rgba(49, 35, 86, 0.8);
+      border-radius: 15px;
+      color: #ffffff;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 8px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      color: #ffffff;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li:before {
+      content: "•";
+      color: #ffffff;
+      font-size: 14px;
+      padding-right: 8px;
+    }
+
+    /* Additional styles */
+    #movingText {
+      text-align: center;
+      font-size: 48px;
+      font-weight: bold;
+      margin-top: 50px;
+      background: linear-gradient(45deg, #FFA63D, #FF3D77, #338AFF, #3CF0C5);
+      background-size: 400% 400%;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      animation: gradientAnimation 8s ease infinite;
+    }
+
+    @keyframes gradientAnimation {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+  </style>
+</head>
+<body>
+  <center>
+    <h1>Welcome to the <span id="movingText">Multiple Intelligence Test!</span></h1>
+    <!--<img src="brain.jpg" alt="Quiz Image">-->
+    <br>
+    <div id="myForm">
+      <form id="usernameForm">
+        <input type="text" id="username" placeholder="Enter your username" required>
+        <button type="submit">Start Quiz</button>
+      </form>
+    </div>
+  </center>
+ 
+  <div class="additional-info">
+    <p>
+      <span style="color: #FF4E50;">Multiple Intelligences</span> is a theory developed by psychologist <span style="color: #FF4E50;">Howard Gardner</span>. It suggests that intelligence is not a single entity that can be measured by a single IQ score, but rather a combination of different intelligences or abilities. According to Gardner, there are eight distinct intelligences:
+    </p>
+    <ul style="color: #F9D423;">
+      <li>linguistic</li>
+      <li>logical-mathematical</li>
+      <li>spatial</li>
+      <li>musical</li>
+      <li>bodily-kinesthetic</li>
+      <li>interpersonal</li>
+      <li>intrapersonal</li>
+      <li>naturalistic</li>
+    </ul>
+    <p>
+      Each person possesses a unique combination of these intelligences, and they can excel in different areas based on their strengths. This theory challenges the traditional view of intelligence and encourages educators to recognize and foster different types of intelligence in their teaching methods. In this quiz, you will have the opportunity to explore your own multiple intelligences and discover your areas of strength. Enjoy the quiz and have fun!
+    </p>
+  </div>
+
+  <script>
+    document.getElementById("usernameForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+      var username = document.getElementById("username").value;
+      sessionStorage.setItem("username", username); // Store the username in sessionStorage
+      window.location.href = "test.html"; // Redirect to test.html
+    });
+  </script>
+</body>
+</html>

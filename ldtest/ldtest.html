@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learning Disabilities Test</title>
+    <style>
+        body {
+            font-family: "Open Sans";
+            background-image: url("grad.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        #header .logo {
+            height: 40px;
+            width: 40px;
+            background-color: #6e5494;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        #header .logo img {
+            height: 30px;
+            width: 30px;
+        }
+
+        #header .username {
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        #header .logout {
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #container {
+            width: 50%;
+            padding: 0 25px 40px 50px;
+            background-color: rgba(49, 35, 86, 0.8);
+            border-radius: 10px;
+            color: #ffffff;
+            font-weight: bold;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 8px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            transition: background-color 0.3s ease;
+        }
+
+        #title {
+            text-decoration: none;
+            color: white;
+        }
+        .button.score {
+              /* Change the button color to red */
+        /* Add some margin to separate it from the "Next" button */
+        height: 55px; /* Set the height */
+        width: 180px; /* Set the width */
+        padding: 0 25px; /* Adjust the padding */
+        margin-top: 10px;
+        margin-left: 20px;
+        
+        }
+        .button {
+            border-radius: 30px;
+            height: 45px;
+            width: 100px;
+            padding-left: 5px;
+            padding-right: 5px;
+            position: relative;
+            float: right;
+            background-color: #6e5494;
+            margin: 0 2px 0 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .button a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .button:hover {
+            background-color: #876fb6;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo">
+        </div>
+        <div>
+            <span class="username" id="username"></span>
+            <br>
+            <br>
+            <span class="logout" id="logout">Logout</span>
+        </div>
+    </div>
+    <div id="container">
+        <div id="title">
+            <h1>Learning Disabilities Test</h1>
+        </div>
+        <br/>
+        <div id="quiz"></div>
+        <div class="button" id="next"><a href="#">Next</a></div>
+    </div>
+    <div class="button score">
+        <a href="scope.html">How to remove learning disabilities
+        </a> <!-- Add the URL link to the "Score" button -->
+    </div>
+   
+    <center>
+        <script>
+            // Retrieve the username from sessionStorage
+            var username = sessionStorage.getItem("username");
+            if (username) {
+                document.getElementById("username").textContent = username; // Display the username
+            }
+
+            // Logout functionality
+            document.getElementById("logout").addEventListener("click", function() {
+                sessionStorage.removeItem("username"); // Remove the username from sessionStorage
+                window.location.href = "testuser.html"; // Redirect to the username page
+            });
+        </script>
+             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+             <script src="questions.json"></script>
+             <script src="testld.js"></script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  line-height: 1.5em;
+  background-color: #437D7F;
+  color: white;
+  width: 80%;
+  margin: 20px auto;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), linear-gradient(to bottom, #256EFF, #00B4FF);
+  background-size: cover;
+}
+
+body{
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+}
+
+
+header {
+  height: 100px;
+  align-items: center;
+}
+
+h1 {
+  font-size: 38px;
+  color: white;
+  padding: 20px;
+  margin: 0;
+}
+header nav{
+  padding: 10px 40px 20px 5px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+
+}
+
+header nav .nav-right{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav .nav-right a{
+  text-decoration: none;
+  color: white;
+  margin-right: 30px;
+  position: relative;
+}
+
+header nav .nav-right a:after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width .3s ease-in-out;
+}
+
+header nav .nav-right a:hover:after {
+  width: 100%;
+}
+
+/* main page */
+
+#banner {
+  width: 100%;
+  margin: 0 auto;
+  clear: both;
+}
+#banner-imgs img {
+  clip-path: ellipse(45% 50% at 50% 50%);
+  max-width: 32%;
+}
+#banner-imgs li {
+  display: inline;
+} 
+
+.left {
+  float: left;
+  max-width: 40%;
+}
+
+#schools li a:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  margin-top: 15px;
+  font-size: 28px;
+  color: white;
+  text-shadow: 1px 1px 2px #888;
+  margin-bottom: 8px;
+}
+
+p {
+  margin-bottom: 25px;
+}
+
+.right {
+  float: right;
+  max-width: 50%;
+}
+
+#btn {
+  font-size: 18px;
+  text-align: center;
+  text-transform: capitalize;
+  border-radius: 3px;
+  background: #CC444B ;
+  color: #fff;
+  padding: 5px 10px;
+  transition: 350ms all;
+  cursor: pointer;
+  float: right;
+  text-decoration: none;
+  border: 1px solid black;
+}
+
+#btn:hover {
+  background: #E8A959;
+  color: #fff;
+}
+
+/* About us page layout */
+
+.bios div{
+  min-height:200px;
+  margin: 50px auto;}
+
+.bios h3{
+  text-shadow: 1px 1px 1px #888;
+  font-size: larger;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  line-height: 50px;
+  padding-left: 15px;
+}
+
+.bios img{
+  max-width: 180px;
+}
+
+#about-head {
+  text-shadow: 1px 1px 1px #888;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 50px;
+  padding-left: 15px;
+}
+
+.bios img {
+  float: left;
+  margin-right: 10px;
+  border-radius: 10%;
+}
+
+/* IQtypes page layout */
+
+.iqtypes {
+  margin: 5px;
+}
+.iqtypes div {
+  min-height:200px;
+  margin: 5px;
+}
+
+.iqtypes h3 {
+  text-shadow: 1px 1px 1px #888;
+  font-size: larger;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  line-height: 50px;
+  padding-left: 15px;
+}
+
+.iqtypes img {
+  float: right;
+  margin-left: 10px;
+  border-radius: 10%;
+  width: 200px;
+  height: 200px;
+}
+
+/* label colors */
+
+#linguist h3 {
+  color:#CC444B;
+  background-color: rgba(204, 68, 75, 0.25);
+}
+
+#logic h3 {
+  color:#FF6FBB;
+  background-color: rgba(255, 111, 188, 0.25);
+}
+
+#aileen h3, #music h3 {
+  color:#2FB7D6;
+  background-color: rgba(47, 183, 214, 0.25);
+}
+
+#bodily h3 {
+  color: #70FFC8;
+  background-color: rgba(112, 255, 200, 0.25);
+}
+
+#brandyn h3, #spatial h3 {
+  color:#5963E8;
+  background-color: rgba(89, 99, 232, 0.25);
+}
+
+#adrienne h3, #intra h3 {
+  color:#FCE958;
+  background-color: rgba(224, 255, 98, 0.4);
+}
+
+#haley h3, #inter h3 {
+  color:#e8a959;
+  background-color: rgba(232, 170, 89, 0.25);
+}
+
+.musicly {
+  color: #2FB7D6;
+  text-shadow: 1px 1px 2px #888;
+  text-transform: uppercase;
+}
+
+.interly {
+  color:#e8a959;
+  text-shadow: 1px 1px 2px #888;
+  text-transform: uppercase;
+}
+
+.intraly {
+  color:#FCE958;
+  text-shadow: 1px 1px 2px #888;
+  text-transform: uppercase;
+}
+
+.spatially {
+  color:#5963E8;
+  text-shadow: 1px 1px 2px #888;
+  text-transform: uppercase;
+}
+
+/* Survey page and about us page intro */
+
+.intro {
+  width: 500px;
+  line-height: 30px;
+  margin: 0px auto;
+}
+
+/* footer */
+
+footer {
+  clear: both;
+  text-align: center;
+  background-color: #437D7F;
+  color: #FFFFFF;
+  padding: 10px;
+}
+
+footer p {
+  margin: 0; /* Remove default margin */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to elements */
+.animate-on-scroll {
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out forwards;
+}
